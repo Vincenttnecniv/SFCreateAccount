@@ -1,0 +1,14 @@
+<aura:component controller="AccountControllerApex">
+    <aura:attribute name="account" type="Account"
+                    default="{ 'sobjectType': 'Account',
+                               'Name': '',
+                               'Phone': '',
+                               'Website': '' }"/>
+ 
+    <form class="slds-form--stacked">
+        <lightning:input label="Account Name" value="{!v.account.Name}"/>
+        <lightning:input label="Phone" value="{!v.account.Phone}"/>
+        <lightning:input label="Website" value="{!v.account.Website}"/>
+        <lightning:button label="Create Account" onclick="{!c.createAccount}"/>
+    </form>
+</aura:component>	
